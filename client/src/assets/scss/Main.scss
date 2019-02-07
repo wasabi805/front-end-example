@@ -1,0 +1,11 @@
+@import "utils/reset";
+
+.Main {
+  text-align: center;
+  background-color: rgba(28, 64, 91, 0.42);
+}
+
+@import "components/dots-01/dots-01";
+@import "components/dots-01/welcome-stroke";
+@import "components/dots-01/get-started-stroke";
+

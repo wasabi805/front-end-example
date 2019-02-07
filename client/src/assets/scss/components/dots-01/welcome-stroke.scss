@@ -1,0 +1,56 @@
+@import "../../utils/vars";
+
+//style class from Adobe Illustrator
+.st0{
+  fill:none;
+  stroke:#FFFFFF;
+  stroke-width:3;
+  stroke-miterlimit:10;
+}
+
+.title{
+  position: relative;
+  height: 33vh;
+  width: 100vw;
+  margin: 2em auto;
+  z-index: 20;
+}
+@media only screen and(min-width: $tablet) {
+  .title{
+    margin: 4em auto;
+    width: 70vw;
+  }
+}
+
+path{
+  stroke: #fff;
+  fill: #fff;
+  stroke-dasharray: 1370;
+  opacity:10;
+  animation: animateWelcome 3s cubic-bezier(0,0.23,1,.1);
+}
+
+@keyframes animateWelcome{
+  0%{
+    opacity: 0;
+    fill:none;
+    stroke-dashoffset: 1370;
+  }
+  30%{
+    opacity: 10;
+    fill: none;
+    stroke-dashoffset: 1370;
+  }
+  90%{
+    fill: rgba(225,225,225,0);
+  }
+
+  100%{
+    opacity: 10;
+    fill: rgba(225,225,225,1);
+    stroke-dashoffset: 0;
+
+  }
+
+}
+

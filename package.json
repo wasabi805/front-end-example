@@ -1,0 +1,21 @@
+{
+  "name": "animations-sandbox-collection",
+  "version": "1.0.0",
+  "description": "collection of animation projects",
+  "main": "index.js",
+  "scripts": {
+    "server" : "node server.js",
+    "client": "npm start --prefix client",
+    "dev" : "concurrently \"npm run server\" \"npm run client\""
+  },
+  "keywords": [
+    "Tim",
+    "Ocampo"
+  ],
+  "author": "Tim Ocampo",
+  "license": "ISC",
+  "dependencies": {
+    "concurrently": "^4.1.0",
+    "express": "^4.16.4"
+  }
+}

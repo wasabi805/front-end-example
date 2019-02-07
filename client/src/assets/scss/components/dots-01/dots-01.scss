@@ -1,0 +1,56 @@
+$bokehCount: 25;
+$bokehBaseSize: 3rem;
+$bokehBaseOpacity: 0.45;
+$bokehBaseBrightness: 200;
+$colorSet: cyan, magenta, yellow ;
+$bokehBaseDuration: 16s;
+
+.hero{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.dots-container{
+  background-image: linear-gradient(to bottom right , #8216f8, #5b0f14);
+  position: absolute;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+.dots-container div{
+  position: absolute;
+  border-radius: 50%;
+  //animation
+  animation-name: bokeh;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+
+  //single dots
+  @for $i from 1 through $bokehCount{
+    &:nth-child(#{$i}){
+      $randomizedSize: random() + $bokehBaseSize;
+      width: $randomizedSize;
+      height: $randomizedSize;
+      top: random(100) * 1%;
+      left: random(100) * 1%;
+      color: nth($colorSet, random(length($colorSet)));
+      opacity: $bokehBaseOpacity + random(4) * 0.15;
+      box-shadow: ($randomizedSize + 5rem) 0 (0.2rem + random()*0.5rem)currentColor;
+      filter: brightness($bokehBaseBrightness +random(150)*1%);
+
+      //animation prop for movement
+      transform-origin: (random(40)-20) * 1rem (random(40)-20) * 1rem ;
+      //animation speed
+      animation-duration: $bokehBaseDuration + random(30)*1s;
+    }
+  }
+}
+@keyframes bokeh {
+  100% {transform: rotate(360deg); }
+}
+
+
+

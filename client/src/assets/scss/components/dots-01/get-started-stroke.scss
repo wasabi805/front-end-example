@@ -1,0 +1,96 @@
+@import "../../utils/vars";
+
+.btn{
+  height: 100%;
+  &:hover{
+    border: solid 5px #440d5d;
+  }
+}
+
+.shadow {
+  -moz-box-shadow:    inset 0 0 10px #000000;
+  -webkit-box-shadow: inset 0 0 10px #000000;
+  box-shadow:         inset 0 0 10px #000000;
+}
+
+
+.btn-container{
+  width: 50%;
+  -webkit-transform: translateX(50%);
+  z-index: 10;
+
+
+  .wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+
+    margin: 0 auto;
+    width: 67%;
+    background-color: #261c2f63;
+    height: 100%;
+
+    p{
+      font-family: Standaris;
+      font-size: 4vw;
+      color: white;
+    }
+
+    .text{
+      position: absolute;
+      margin: 0 auto;
+      width: 100%;
+    }
+
+    .fade-in-left {
+      -webkit-animation: fade-in-left 0.6s cubic-bezier(0.190, 1.000, 0.220, 1.000) 3s both;
+      animation: fade-in-left 0.6s cubic-bezier(0.190, 1.000, 0.220, 1.000) 3s both;
+    }
+
+    @-webkit-keyframes fade-in-left {
+      0% {
+        -webkit-transform: translateX(-50px);
+        transform: translateX(-50px);
+        opacity: 0;
+      }
+      100% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
+    @keyframes fade-in-left {
+      0% {
+        -webkit-transform: translateX(-50px);
+        transform: translateX(-50px);
+        opacity: 0;
+      }
+      100% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
+  }
+//from Adobe Illustrator
+}
+.st1{
+  fill: #FFFFFF;
+}
+
+@media only screen and(min-width: 321px) and(max-width: $tablet) {
+  .btn-container .wrapper{
+    bottom: -60px;
+    width: 9em;
+  }
+}
+@media only screen
+and (min-device-width: 768px)
+and (max-device-width: 1024px)
+and (-webkit-min-device-pixel-ratio: 1) {
+  .btn-container .wrapper{
+
+    width: 13em;
+  }
+}
